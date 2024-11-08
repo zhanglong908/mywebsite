@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- 字体样式 -->
+<!--    <link-->
+<!--&lt;!&ndash;      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"&ndash;&gt;-->
+<!--      rel="stylesheet"-->
+<!--    />-->
+    <link rel="stylesheet" href="style.css" />
+    <title>Type Animation</title>
+  </head>
+  <body bgcolor="#2b1055">
+    <div class="typeAnimation" id="dd">
+      <div class="text">WELCOME TO My Website !!!</div>
+    </div>
+  <script>
+  var startx, starty, movex, movey, endx, endy, nx, ny, angle;
+
+function touchStart(event) {
+    event.preventDefault();
+    var touch = event.touches[0];
+    startx = Math.floor(touch.pageX);
+    starty = Math.floor(touch.pageY);
+    console.log('Start');
+}
+
+function touchMove(event) {
+    event.preventDefault();
+    var touch = event.touches[0];
+    movex = Math.floor(touch.pageX);
+    movey = Math.floor(touch.pageY);
+    console.log('Moving');
+}
+
+function touchEnd(event) {
+    event.preventDefault();
+    endx = Math.floor(event.changedTouches[0].pageX);
+    endy = Math.floor(event.changedTouches[0].pageY);
+    console.log('End');
+
+    nx = endx - startx;
+    ny = endy - starty;
+
+    if (Math.abs(nx) <= 1 || Math.abs(ny) <= 1) {
+        console.log('Swipe distance too small');
+        return;
+    }
+
+    angle = Math.atan2(ny, nx) * 180 / Math.PI;
+
+    if (angle >= -45 && angle < 45) {
+        // //右滑
+       window.location.replace("Parallax-Scrolling-Website/index.html");
+    } else if (angle >= 45 && angle < 135) {
+        //上滑
+       window.location.replace("Parallax-Scrolling-Website/index01.html");
+    } else if (angle >= 135 || angle < -135) {
+        // //左滑
+     window.location.replace("Parallax-Scrolling-Website/index01.html");
+    } else if (angle >= -135 && angle < -45) {
+       //下滑
+         window.location.replace("Parallax-Scrolling-Website/index01.html");
+    }
+}
+
+var box = document.getElementById('dd');
+box.addEventListener('touchstart', touchStart, false);
+box.addEventListener('touchmove', touchMove, false);
+box.addEventListener('touchend', touchEnd, false);
+
+    </script>
+  </body>
+</html>
