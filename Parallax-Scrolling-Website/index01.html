@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+
+  <title>Parallax Scrolling Website</title>
+  <link rel="stylesheet" href="parallax_style.css">
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css">
+</head>
+<body>
+<header>
+  <a href="#" class="logo">ZhangLong</a>
+  <ul>
+    <li><a class="menu-item" href="#" data-target="home-dropdown">Home</a>
+      <div class="dropdown" id="home-dropdown">
+        <div class="dropdown-content">
+  <a href="../博客/resource/index.html"><i class="fas fa-calendar-week"></i>自己的博客</a>
+
+        </div>
+      </div>
+    </li>
+    <li><a class="menu-item" href="#" data-target="about-dropdown">Hobby</a>
+      <div class="dropdown" id="about-dropdown">
+        <div class="dropdown-content">
+           <a href="../2021.2.203D轮播图片/index.html"><i class="fas fa-calendar-week"></i>初珑</a>
+  <a href="../2021.5.29瀑布流布局/瀑布流布局/index.html"><i class="far fa-question-circle"></i>理想型</a>
+           <a href="../(6) Blur Loader/blur.html"><i class="fas fa-qrcode"></i>想去的地方</a>
+  <a href="../2022.3.13.文字环绕图片/照片围绕/index02.html"><i class="fas fa-stream"></i>照片围绕</a>
+  <a href="../2022.3.27.鼠标悬停方向感应名片/index.html"><i class="fas fa-calendar-week"></i>鼠标悬停方向感应名片</a>
+        </div>
+      </div>
+    </li>
+    <li><a class="menu-item" href="#" data-target="work-dropdown">Ideal</a>
+      <div class="dropdown" id="work-dropdown">
+        <div class="dropdown-content">
+  <a href="../贼帅的高级杂志切换效果/index.html"><i class="fas fa-sliders-h"></i>杂志</a>
+             <a href="../Music Player in JavaScript/index.html"><i class="fas fa-calendar-week"></i>音乐播放器</a>
+  <a href="../翻页动画/index.html"><i class="far fa-envelope"></i>英雄联盟卡片</a>
+        </div>
+      </div>
+    </li>
+    <li><a class="menu-item" href="#" data-target="contact-dropdown">Life</a>
+      <div class="dropdown" id="contact-dropdown">
+        <div class="dropdown-content">
+  <a href="../响应式视频播放/index.html"><i class="fas fa-stream"></i>喜欢的CG</a>
+  <a href="../todoList作品/todo.html"><i class="fas fa-calendar-week"></i>今日任务</a>
+  <a href="../text-effect/template-01/index.html"><i class="far fa-question-circle"></i>给自己的话</a>
+<!--  <a href="../博客/resource/resume.html"><i class="fas fa-sliders-h"></i>resume</a>-->
+<!--  <a href="../博客/resource/single-post.html"><i class="far fa-envelope"></i>single-post</a>-->
+        </div>
+      </div>
+    </li>
+  </ul>
+</header>
+  <section>
+    <img src="images/stars.png" id="stars">
+    <img src="images/moon.png" id="moon">
+    <img src="images/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Moon Light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="images/mountains_front.png" id="mountains_front">
+  </section>
+  <div class="sec" id="sec">
+    <h2>ZhangLong</h2>
+   <p>会当凌绝顶，一览众山小。——杜甫《望岳》<br><br>长风破浪会有时，直挂云帆济沧海。——李白《行路难》<br><br>不经一番寒彻骨，怎得梅花扑鼻香。——黄蘖禅师《上堂开示颂》<br><br>山不厌高，海不厌深，周公吐哺，天下归心。——曹操《短歌行》<br><br>莫等闲，白了少年头，空悲切。——岳飞《满江红》<br><br>千磨万击还坚劲，任尔东西南北风。——郑燮《竹石》<br><br>路漫漫其修远兮，吾将上下而求索。——屈原《离骚》<br><br>老骥伏枥，志在千里；烈士暮年，壮心不已。——曹操《龟虽寿》<br><br>天行健，君子以自强不息。——《周易》<br><br>海内存知己，天涯若比邻。——王勃《送杜少府之任蜀州》</p>
+  </div>
+
+
+</div>
+  <script>
+     document.querySelectorAll('.menu-item').forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    event.preventDefault(); // 阻止默认链接行为
+    var target = this.getAttribute('data-target'); // 获取目标下拉菜单的ID
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+      dropdown.classList.remove('show-dropdown'); // 隐藏所有下拉菜单
+    });
+    document.getElementById(target).classList.add('show-dropdown'); // 显示对应的下拉菜单
+  });
+});
+function handleNavigation(url) {
+  // 在这里执行任何需要的操作，例如记录日志、更新状态等
+  // 最后，重定向到指定的URL
+  window.location.replace("../Parallax-Scrolling-Website/index.html");
+}
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let text = document.getElementById('text')
+    let btn = document.getElementById('btn')
+    let mountains_front = document.getElementById('mountains_front')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px'
+      moon.style.top = value * 1.05 + 'px'
+      mountains_behind.style.top = value * 0.5 + 'px'
+      mountains_front.style.top = value * 0 + 'px'
+      text.style.marginRight = value * 4 + 'px'
+      text.style.marginTop = value * 1.5 + 'px'
+      btn.style.marginTop = value * 1.5 + 'px'
+      header.style.top = value * 0.5 + 'px'
+    })
+  </script>
+</body>
+</html>
