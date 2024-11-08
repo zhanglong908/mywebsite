@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>张龙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            background-color:#fff3cd;
+        }
+        .shell{
+            position: relative;
+            width: 70%;
+            padding: 50px;
+        }
+        h2{
+            color: rgb(123, 150, 241);
+            font-size: 90px;
+            margin-left: 400px;
+            font: 500 80px '优设标题黑';
+        }
+        p{
+            color:#000000;
+            font-size: 22px;
+            text-align: justify;
+        }
+        .left{
+            height: 500px;
+            float: left;
+            shape-margin: 20px;
+            shape-outside: url(img.png);
+        }
+        .right{
+            height: 500px;
+            float: right;
+            shape-outside: url(img2.png);
+            margin: 240px -80px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <img src="1.jpeg" alt="" class="left">
+        <img src="2.jpeg" alt="" class="right">
+        <h2>朴初珑</h2>
+        <p> 朴初珑（Park Cho-rong），1991年3月3日出生于韩国忠清北道清原郡，是韩国著名的女歌手和演员，同时也是女子演唱组合A Pink的队长
+            和副主唱。她从小就受到父亲的影响学习合气道，并在忠清北道女子高等学校完成学业。 <br /> 2009年，朴初珑参加了JYP
+            Entertainment的试镜，并成功进入决赛，之后以练习生的身份加入了A CUBE Entertainment。 <br /> 2011年4月，朴初珑随
+            A Pink组合发行首张团体专辑《Seven Springs of A Pink》正式出道，同年11月，她随A Pink获得了“2011 MAMA in Singapore”
+            最佳女子新人奖。朴初珑不仅在音乐领域有所建树，她还积极参与公益活动，例如在2020年3月13日，她向大邱市厅捐赠了5000个手部消毒液，
+            用于大邱地区的防疫工作。 <br /> 除了团体活动外，朴初珑也展现了个人的多才多艺。2020年7月9日，她主演的电影《不良家族》在韩国首
+            映，她在剧中饰演将音乐视为唯一朋友的角色宥莉。此外，朴初珑还参与了多首歌曲的歌词创作，包括A Pink的《4月19日》、《So Long》和
+            《Don't be silly》等。 <br /> 2023年4月28日，朴初珑与A Pink的原所属社IST专属合约到期后，转签了Choi Creative Lab经
+            纪公司，继续她的演艺事业。朴初珑以其清纯的美貌和温和的曲线美吸引着粉丝们的视线，她不仅是一个关心队员身体健康的大姐姐，还拥有内
+            向害羞的微笑和甜美的嗓音。 </p>
+    </div>
+<script>
+    window.addEventListener('wheel', function(event) {
+        event.preventDefault();
+        if (event.deltaY > 0) {
+            //下滑
+          window.location.replace("Parallax-Scrolling-Website/index01.html");
+        } else if (event.deltaY < 0) {
+          window.location.replace("Parallax-Scrolling-Website/index01.html");
+        }
+      });
+</script>
+</body>
+
+</html>

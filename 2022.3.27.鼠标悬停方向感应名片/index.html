@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+               background-color:#3B5998 /* 较深的紫色 */
+        }
+
+        .shell {
+            position: relative;
+            min-width: 1000px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* 设置3d变化 */
+            transform-style: preserve-3d;
+            /* 添加透视效果 */
+            perspective: 900px;
+        }
+
+        .shell .box {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            transition: 0.3s;
+            overflow: hidden;
+            margin: 30px;
+            transform: rotateY(0deg);
+            transition-delay: .1s;
+            border-radius: 5px;
+            border: #fff 5px solid;
+        }
+
+        /* 当鼠标所有卡片的父元素点shell上时，
+        所有卡片像Y轴翻转20度 */
+        .shell:hover .box {
+            transform: rotateY(20deg);
+        }
+
+        /* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
+        并放大一点二五倍，加个阴影 */
+        .shell .box:hover {
+            transform: rotateY(0deg) scale(1.25);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        /* 当鼠标悬浮在卡片上时，
+        当前卡片后面的所有卡片全部都反向翻转负20度 */
+        .shell .box:hover~.box {
+            transform: rotateY(-20deg);
+        }
+
+        .shell .box .images img {
+            width: 100%;
+        }
+
+        .shell .box .content {
+            position: absolute;
+            top: 0;
+            width: 90%;
+            height: 100%;
+            z-index: 999;
+            padding: 15px;
+        }
+
+        .shell .box .content h2 {
+            color: rgb(210, 140, 140);
+            transition: 0.3s;
+            font-size: 20px;
+            transform: translateY(-100px);
+        }
+
+        .shell .box:hover .content h2 {
+            transform: translateY(-15px);
+        }
+
+        .shell .box .content p {
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+            font-size: 14px;
+            transform: translateY(600px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .shell .box:hover .content p {
+            transform: translateY(220px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="box">
+            <div class="images">
+                <img src="image/6.jpeg">
+            </div>
+            <div class="content">
+                <h2>ZeenChin</h2>
+                <p>初珑的音乐和表演总能引起我的共鸣，她的作品常常能够触及我的内心，让我感受到共鸣和慰藉。她的作品是我生活中不可或缺的一部分，我对她的喜欢也随着这些情感的共鸣而变得更加深刻
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="images">
+                <img src="image/2.jpeg">
+            </div>
+            <div class="content">
+                <h2>ZeenChin</h2>
+                <p>初珑以其独特的嗓音和舞台魅力在音乐界独树一帜。每次听到她的歌声，都能感受到她对音乐的热爱和投入，她的歌声总能触动人心，让我不由自主地被她的音乐所吸引
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="images">
+                <img src="image/9.jpeg">
+            </div>
+            <div class="content">
+                <h2>ZeenChin</h2>
+                <p>我对朴初珑的喜爱不仅仅是因为她的才华，她的个性同样令人着迷。她总是以真诚和坦率的态度面对粉丝和公众，这种真实不做作的性格让我对她的喜欢更加深厚
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="images">
+                <img src="image/7.jpeg">
+            </div>
+            <div class="content">
+                <h2>ZeenChin</h2>
+                <p>初珑展现出的不仅仅是歌唱实力，她的舞蹈同样令人印象深刻。她的每一个动作都充满了力量和美感，她的舞台表现力总能让人眼前一亮，让我对她的艺术才华充满敬意
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="images">
+                <img src="image/8.jpeg">
+            </div>
+            <div class="content">
+                <h2>ZeenChin</h2>
+                <p>随着时间的推移，朴初珑不断成长和进步，无论是在音乐上还是在个人发展上。我对她的喜爱也随着她的成长而加深，她每一次的突破和成功都让我感到骄傲和高兴
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
